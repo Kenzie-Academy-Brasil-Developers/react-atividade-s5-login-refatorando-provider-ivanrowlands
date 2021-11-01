@@ -1,5 +1,8 @@
 import { useCart } from "../../Provider/Cart/index";
 import { Container } from "./styles";
+import { Button } from 'antd';
+import { DeleteOutlined } from '@ant-design/icons';
+import 'antd/dist/antd.css'
 
 interface ProductData {
   id: number;
@@ -35,7 +38,7 @@ export const CardCart = ({
       <p>
         Price: <span>R$ {price}</span>
       </p>
-      <button onClick={() => deleteProduct(product)}>Remover Produto</button>
+      <Button type="primary" danger onClick={() => deleteProduct(product)}><DeleteOutlined />Adicionar Produto</Button>
     </Container>
   );
 };

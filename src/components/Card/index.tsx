@@ -1,5 +1,8 @@
 import { useCart } from "../../Provider/Cart/index";
-import { Container } from "./styles";
+import { Container } from './styles'
+import { Button } from 'antd';
+import { ShoppingCartOutlined } from '@ant-design/icons';
+import 'antd/dist/antd.css'
 
 interface ProductData {
   id: number;
@@ -18,26 +21,28 @@ interface ProductsProps {
   product: ProductData;
 }
 
-export const Card = ({
-  id,
+
+
+export const Card2 = ({
   title,
-  description,
   image,
+  id,
   price,
+  description,
   product,
 }: ProductsProps) => {
   const { addProduct } = useCart();
 
   return (
-    <Container>
+      <Container>
       <img src={image} alt={title} />
       <h5>{title}</h5>
       <p>
         Price : <span>R$ {price}</span>
       </p>
-      <button onClick={() => addProduct(product)}>Adicionar Produto</button>
-    </Container>
+      <Button type="primary" onClick={() => addProduct(product)}><ShoppingCartOutlined />Adicionar Produto</Button>
+  </Container>
   );
 };
 
-export default Card;
+export default Card2;

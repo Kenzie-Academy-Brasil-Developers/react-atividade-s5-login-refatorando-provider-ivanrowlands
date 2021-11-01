@@ -8,9 +8,10 @@ export const Container = styled.div`
   width: 280px;
   justify-content: space-between;
   align-items: center;
-  background-color: #f1fffa;
+  background-color: #ffffff;
   color: #e3170a;
-  border-radius: 15px;
+  border-radius: 15% 15% / 9% 20%;
+  border: solid 1px blueviolet;
   img {
     margin: 10px auto;
     height: 200px;
@@ -18,27 +19,13 @@ export const Container = styled.div`
   h5 {
     margin: 5px auto;
     width: 90%;
-    color: #493b2a;
+    color: #000000;
   }
   p {
     margin: 2px auto 10px;
     width: 90%;
     span {
-      color: #832161;
-    }
-  }
-  button {
-    width: 90%;
-    height: 30px;
-    padding: 5px 0;
-    margin-bottom: 5px;
-    background-color: #138a36;
-    font-size: 18px;
-    color: #f1fffa;
-    border: 1px solid transparent;
-    border-radius: 5px;
-    &:hover {
-      background-color: #27435e;
+      color: #000000;
     }
   }
   @media (min-width: 768px) {
